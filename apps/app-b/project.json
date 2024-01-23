@@ -1,7 +1,7 @@
 {
-  "name": "app-a",
+  "name": "app-b",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/app-a",
+  "sourceRoot": "apps/app-b",
   "projectType": "application",
   "targets": {
     "build": {
@@ -9,11 +9,11 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/apps/app-a"
+        "outputPath": "dist/apps/app-b"
       },
       "configurations": {
         "development": {
-          "outputPath": "apps/app-a"
+          "outputPath": "apps/app-b"
         },
         "production": {}
       }
@@ -22,18 +22,16 @@
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "app-a:build",
+        "buildTarget": "app-b:build",
         "dev": true
       },
       "configurations": {
         "development": {
-          "buildTarget": "app-a:build:development",
-          "port": 4300,
+          "buildTarget": "app-b:build:development",
           "dev": true
         },
         "production": {
-          "buildTarget": "app-a:build:production",
-          "port": 4300,
+          "buildTarget": "app-b:build:production",
           "dev": false
         }
       }
@@ -41,14 +39,14 @@
     "export": {
       "executor": "@nx/next:export",
       "options": {
-        "buildTarget": "app-a:build:production"
+        "buildTarget": "app-b:build:production"
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/app-a/jest.config.ts"
+        "jestConfig": "apps/app-b/jest.config.ts"
       }
     },
     "lint": {

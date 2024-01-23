@@ -1,5 +1,4 @@
 import styles from './page.module.css';
-import { Header } from '@paulschneider/shared';
 
 export default async function Index() {
   /*
@@ -12,10 +11,10 @@ export default async function Index() {
       <div className="wrapper">
         <div className="container">
           <div id="welcome">
-            <Header>
-              <span> Hello!</span>
-              Welcome app-a 👋
-            </Header>
+            <h1>
+              <span> Hello there, </span>
+              Welcome app-b 👋
+            </h1>
           </div>
 
           <div id="hero" className="rounded">

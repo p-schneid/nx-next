@@ -26,8 +26,8 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    "../../apps/app-a/.next/types/**/*.ts",
-    "../../dist/apps/app-a/.next/types/**/*.ts",
+    "../../apps/app-b/.next/types/**/*.ts",
+    "../../dist/apps/app-b/.next/types/**/*.ts",
     "next-env.d.ts",
     ".next/types/**/*.ts"
   ],
